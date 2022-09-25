@@ -1,8 +1,7 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Employee from "./Pages/Employee";
@@ -14,14 +13,14 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <div className="btn-group">
+        <div className="navbar">
           <Navbar/>
         </div>        
         <hr/>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/employee" element={<Employee/>}/>
-            <Route path="/employee/:id" element={<Register/>} /> 
+            <Route path="/employee/register" element={<Register/>} /> 
             <Route path="*" element={<NotFound/>}/>
           </Routes>
           
